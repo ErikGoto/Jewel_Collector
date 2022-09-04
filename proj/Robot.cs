@@ -1,6 +1,6 @@
 
     
-public class Robot : element
+class Robot : element
 {
     private int n_joias;
     private int pontos;
@@ -25,5 +25,12 @@ public class Robot : element
     public void right_desl(){
         if (Posicao[0] < 9)
             Posicao[0]++;
+    }
+
+    Map robot_map = new Map();
+    public Map grab(Map my_map){
+        robot_map = my_map;
+        
+        return my_map;
     }
 }

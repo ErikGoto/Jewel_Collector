@@ -26,4 +26,6 @@ class Map
     public void remove_element(int[] pos){
         mapa[pos[1], pos[0]] = "-- ";    
     }
+
+    public string[,] Mapa{get {return mapa;}}
 }

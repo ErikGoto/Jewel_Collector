@@ -26,19 +26,33 @@ public static void Main() {
         if (command.Equals("quit")) {
             running = false;
         } else if (command.Equals("w")) {
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.up_desl();
+            if ((R2D2.Posicao[1] > 0) && my_map.Mapa[R2D2.Posicao[1]-1, R2D2.Posicao[0]] == "-- ")
+            {
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.up_desl();
+            }
+            
         } else if (command.Equals("a")) {
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.left_desl();
+            if ((R2D2.Posicao[0] > 0) && my_map.Mapa[R2D2.Posicao[1], R2D2.Posicao[0]-1] == "-- ")
+            {
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.left_desl();
+            }
         } else if (command.Equals("s")) {
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.down_desl();
+            if ((R2D2.Posicao[1] < 9) && my_map.Mapa[R2D2.Posicao[1]+1, R2D2.Posicao[0]] == "-- ")
+            {
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.down_desl();
+            }
         } else if (command.Equals("d")) {
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.right_desl();
+            if ((R2D2.Posicao[0] < 9) && my_map.Mapa[R2D2.Posicao[1], R2D2.Posicao[0]+1] == "-- ")
+            {
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.right_desl();
+            }
         } else if (command.Equals("g")) {
-              
+            my_map = R2D2.grab(my_map);
+                  
         }
 
         Console.Write($"\nPosicao do Robo {R2D2.Posicao[0]}, {R2D2.Posicao[1]}\n");
