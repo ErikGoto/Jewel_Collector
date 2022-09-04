@@ -6,12 +6,16 @@ public static void Main() {
 
     int[] posIniRobs = {0,0};
     Robot R2D2 = new Robot(posIniRobs);
-
+    
+    //Inserindo elementos no mapa
     int[] posJb = {3,4};
-    Jewel Jb = new Jewel("Jb");
     int[] posJg = {9,1};
-    Jewel Jg = new Jewel("Jg");
+    int[] posJg2 = {0,1};
+    Jewel Jb = new Jewel(Jewel_colors.blue);
+    Jewel Jg = new Jewel(Jewel_colors.green);
+    Jewel Jr = new Jewel(Jewel_colors.red);
     my_map.add_element(posJg, (element)Jg);
+    my_map.add_element(posJg2, (element)Jg);
     my_map.add_element(posJb, (element)Jb);
 
     do {

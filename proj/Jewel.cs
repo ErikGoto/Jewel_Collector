@@ -1,10 +1,22 @@
 public class Jewel : element
 {
-    const int red = 100;
-    const int green = 50;
-    const int blue = 10;
-
-    public Jewel(string n){
-        this.Representacao = n;
+    Jewel_colors color;
+    public Jewel(Jewel_colors c){
+        color = c;
+        switch (c)
+        {
+            case Jewel_colors.red:
+                this.Representacao = "Jr";
+                break;
+            case Jewel_colors.blue:
+                this.Representacao = "Jb";
+                break;
+            case Jewel_colors.green:
+                this.Representacao = "Jg";
+                break;
+            default:
+                break;
+        }
+        
     }
 }

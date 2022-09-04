@@ -16,7 +16,6 @@ class Map
     }
 
     public void move_element(int[] pos, string representacao){
-        //Colocar condições para que ele não consiga andar sobre trees e water
         mapa[pos[1], pos[0]] = representacao + " ";
         print_map();
     }
