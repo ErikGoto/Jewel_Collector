@@ -6,7 +6,7 @@ public static void Main() {
 
     int[] posIniRobs = {0,0};
     Robot R2D2 = new Robot(posIniRobs);
-    
+    my_map.add_element(posIniRobs, (element)R2D2);
     //Inserindo elementos no mapa
     int[] posJb = {3,4};
     int[] posJg = {9,1};
@@ -17,39 +17,36 @@ public static void Main() {
     my_map.add_element(posJg, (element)Jg);
     my_map.add_element(posJg2, (element)Jg);
     my_map.add_element(posJb, (element)Jb);
-
+    
     do {
-        my_map.move_element(R2D2.Posicao,"R2");
+        my_map.move_element(R2D2);
         Console.WriteLine("Enter the command: ");
         string command = Console.ReadLine();
-  
+
+        
         if (command.Equals("quit")) {
             running = false;
         } else if (command.Equals("w")) {
-            if ((R2D2.Posicao[1] > 0) && my_map.Mapa[R2D2.Posicao[1]-1, R2D2.Posicao[0]] == "-- ")
-            {
+            
                 my_map.remove_element(R2D2.Posicao);
-                R2D2.up_desl();
-            }
+                R2D2.up_desl(my_map);
+           
             
         } else if (command.Equals("a")) {
-            if ((R2D2.Posicao[0] > 0) && my_map.Mapa[R2D2.Posicao[1], R2D2.Posicao[0]-1] == "-- ")
-            {
+            
                 my_map.remove_element(R2D2.Posicao);
-                R2D2.left_desl();
-            }
+                R2D2.left_desl(my_map);
+            
         } else if (command.Equals("s")) {
-            if ((R2D2.Posicao[1] < 9) && my_map.Mapa[R2D2.Posicao[1]+1, R2D2.Posicao[0]] == "-- ")
-            {
+            
                 my_map.remove_element(R2D2.Posicao);
-                R2D2.down_desl();
-            }
+                R2D2.down_desl(my_map);
+            
         } else if (command.Equals("d")) {
-            if ((R2D2.Posicao[0] < 9) && my_map.Mapa[R2D2.Posicao[1], R2D2.Posicao[0]+1] == "-- ")
-            {
+            
                 my_map.remove_element(R2D2.Posicao);
-                R2D2.right_desl();
-            }
+                R2D2.right_desl(my_map);
+            
         } else if (command.Equals("g")) {
             my_map = R2D2.grab(my_map);
                   

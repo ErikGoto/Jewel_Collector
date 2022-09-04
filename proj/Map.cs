@@ -1,31 +1,34 @@
 class Map
 {
-    private string[,] mapa = new string[10,10];
+    private element[,] mapa = new element[10,10];
+    Espaco_vazio empty = new Espaco_vazio("-- ");
     public Map(){
         for (int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++)
-                mapa[i,j] = "-- ";
+                mapa[i,j] = empty;
     }
 
-    private void print_map(){
+    public void print_map(){
         for (int i = 0; i < 10; i++){
             for (int j = 0; j < 10; j++)
-                Console.Write(mapa[i,j]);
+                Console.Write(mapa[i,j].Representacao);
             Console.WriteLine("\n");
         }
     }
 
-    public void move_element(int[] pos, string representacao){
-        mapa[pos[1], pos[0]] = representacao + " ";
+    public void move_element(element e){
+        int[] pos = e.Posicao; 
+        mapa[pos[1], pos[0]] = e;
         print_map();
     }
+    
     public void add_element(int[] pos, element e){
-        mapa[pos[1], pos[0]] = e.Representacao + " ";
+        mapa[pos[1], pos[0]] = e;
     }
-
+    
     public void remove_element(int[] pos){
-        mapa[pos[1], pos[0]] = "-- ";    
+        mapa[pos[1], pos[0]] = empty;    
     }
 
-    public string[,] Mapa{get {return mapa;}}
+    public element[,] Mapa{get {return mapa;}}
 }

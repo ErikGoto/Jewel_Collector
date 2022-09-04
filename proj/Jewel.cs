@@ -6,13 +6,13 @@ public class Jewel : element
         switch (c)
         {
             case Jewel_colors.red:
-                this.Representacao = "Jr";
+                this.Representacao = "Jr ";
                 break;
             case Jewel_colors.blue:
-                this.Representacao = "Jb";
+                this.Representacao = "Jb ";
                 break;
             case Jewel_colors.green:
-                this.Representacao = "Jg";
+                this.Representacao = "Jg ";
                 break;
             default:
                 break;
