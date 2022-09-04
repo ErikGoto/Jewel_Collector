@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zic3O7ICFn+KOj+d8kJiVeC6RLwgCIAoE9i5m9o/cl4C87Klilo7eI0hf6bL5bn5xI0dBTv+bbvTUhKE0pOFwA==",
+  "dgSpecHash": "S3U0S5MAJMWjO9H6p0VerTMThy8manJjNkMxIGNPwbk8f7UJCCiGxkG3Vf792D0Yq+HBHSs0vIgyIO2MmqtLQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\msft17\\Desktop\\Jewel_Collector\\proj\\proj.csproj",
+  "projectFilePath": "/home/goto/Desktop/Jewel_Collector/proj/proj.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,11 @@
+public class element
+{
+    private int[] posicao = new int[2];
+    private string representacao = "-- ";
+
+    public int[] Posicao{
+       get{return posicao;}
+       set{posicao = value;}
+
+    }
+}
