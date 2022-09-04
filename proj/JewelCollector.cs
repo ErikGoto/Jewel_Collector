@@ -7,8 +7,15 @@ public static void Main() {
     int[] posIniRobs = {0,0};
     Robot R2D2 = new Robot(posIniRobs);
 
+    int[] posJb = {3,4};
+    Jewel Jb = new Jewel("Jb");
+    int[] posJg = {9,1};
+    Jewel Jg = new Jewel("Jg");
+    my_map.add_element(posJg, (element)Jg);
+    my_map.add_element(posJb, (element)Jb);
+
     do {
-        my_map.atualiza_map(R2D2.Posicao,"R2");
+        my_map.move_element(R2D2.Posicao,"R2");
         Console.WriteLine("Enter the command: ");
         string command = Console.ReadLine();
   

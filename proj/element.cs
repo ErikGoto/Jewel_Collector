@@ -6,6 +6,9 @@ public class element
     public int[] Posicao{
        get{return posicao;}
        set{posicao = value;}
-
+    }
+    public string Representacao{
+        get{return representacao;}
+        set{representacao = value;}
     }
 }

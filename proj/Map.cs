@@ -15,11 +15,15 @@ class Map
         }
     }
 
-    public void atualiza_map(int[] pos, string representacao){
+    public void move_element(int[] pos, string representacao){
         //Colocar condições para que ele não consiga andar sobre trees e water
         mapa[pos[1], pos[0]] = representacao + " ";
         print_map();
     }
+    public void add_element(int[] pos, element e){
+        mapa[pos[1], pos[0]] = e.Representacao + " ";
+    }
+
     public void remove_element(int[] pos){
         mapa[pos[1], pos[0]] = "-- ";    
     }
