@@ -1,7 +1,7 @@
 public class JewelCollector {
 
 public static void Main() {
-    Map my_map = new Map();
+    Map my_map = new Map(30);
     bool running = true;
 
     int[] posIniRobs = {0,0};

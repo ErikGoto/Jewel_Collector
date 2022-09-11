@@ -4,7 +4,6 @@ class Robot : element
 {
     private int n_joias;
     private int pontos;
-    private Map robot_map = new Map();
     public Robot(int[] posIni){
         this.Representacao = "R2 ";
         Posicao = posIni;
