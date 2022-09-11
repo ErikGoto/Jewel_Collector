@@ -11,4 +11,9 @@ public class element
         get{return representacao;}
         set{representacao = value;}
     }
+
+    public override string ToString()
+    {
+        return this.Representacao;
+    }
 }

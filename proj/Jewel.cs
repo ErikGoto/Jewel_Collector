@@ -1,6 +1,6 @@
 public class Jewel : element
 {
-    Jewel_colors color;
+    private Jewel_colors color;
     public Jewel(Jewel_colors c){
         color = c;
         switch (c)
@@ -17,6 +17,9 @@ public class Jewel : element
             default:
                 break;
         }
-        
     }
+    public Jewel_colors Color{
+            get{return color;}
+            set{color = value;}
+        }
 }
