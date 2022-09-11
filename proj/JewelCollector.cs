@@ -1,22 +1,12 @@
 public class JewelCollector {
 
 public static void Main() {
-    Map my_map = new Map(30);
+    Map my_map = new Map(10);
     bool running = true;
 
     int[] posIniRobs = {0,0};
     Robot R2D2 = new Robot(posIniRobs);
     my_map.add_element(posIniRobs, (element)R2D2);
-    //Inserindo elementos no mapa
-    int[] posJb = {3,4};
-    int[] posJg = {9,1};
-    int[] posJg2 = {0,1};
-    Jewel Jb = new Jewel(Jewel_colors.blue);
-    Jewel Jg = new Jewel(Jewel_colors.green);
-    Jewel Jr = new Jewel(Jewel_colors.red);
-    my_map.add_element(posJg, (element)Jg);
-    my_map.add_element(posJg2, (element)Jg);
-    my_map.add_element(posJb, (element)Jb);
     
     do {
         my_map.move_element(R2D2);

@@ -12,6 +12,29 @@ class Map
 
         mapa = mapaAux;
         mapSize = size;
+
+        //Adiciona os elementos no mapa
+        Random rdn = new Random();
+        int [] rdnA = new int[] {rdn.Next(2, mapSize), rdn.Next(2, mapSize)};
+
+        element[] e = new element[5];
+        e[0] = new Jewel(Jewel_colors.red);
+        e[1] = new Jewel(Jewel_colors.green);
+        e[2] = new Jewel(Jewel_colors.blue);
+        e[3] = new Obstacle(ObstacleType.tree);
+        e[4] = new Obstacle(ObstacleType.water);
+        for(int i = 0; i<mapSize/5; i++)
+        {
+            foreach (element item in e)
+            {
+                rdnA[0] = rdn.Next(2, mapSize);
+                rdnA[1] = rdn.Next(2, mapSize);
+                add_element(rdnA, item);
+            }
+        }
+        add_forest();
+        add_forest();
+        
     }
 
     public void print_map(){
@@ -36,5 +59,32 @@ class Map
         mapa[pos[1], pos[0]] = empty;    
     }
 
+    public void add_forest(){
+        Random rdn = new Random();
+        int[] rdnArray = new int[2];
+        rdnArray[0] = rdn.Next(2, mapSize);
+        rdnArray[1] = rdn.Next(2, mapSize);
+
+        Obstacle tree = new Obstacle(ObstacleType.tree);
+        try
+        {
+            add_element(rdnArray, tree);
+            for (int i = 0; i < mapSize/4; i++)
+            {
+                rdnArray[0] += 1; 
+                add_element(rdnArray, tree);
+            }
+
+                rdnArray[1] += 1; 
+                add_element(rdnArray, tree);
+                rdnArray[0] -= 1;
+                add_element(rdnArray, tree);
+  
+        }
+        catch (System.Exception)
+        {}
+        
+        
+    }
     public element[,] Mapa{get {return mapa;}}
 }
