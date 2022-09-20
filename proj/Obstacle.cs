@@ -9,6 +9,9 @@ public class Obstacle : element
             case ObstacleType.water:
                 this.Representacao = "## "; //water
                 break;
+            case ObstacleType.radioactive:
+                this.Representacao = "!! "; //radioactive
+                break;
             default:
                 break;
         }

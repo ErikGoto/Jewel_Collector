@@ -15,13 +15,17 @@ class Map
         Random rdn = new Random();
         int [] rdnA = new int[] {rdn.Next(2, mapSize), rdn.Next(2, mapSize)};
 
-        element[] e = new element[5];
+        element[] e = new element[6];
         //Elementos adicionados aleatoriamente no mapa ficam no array 'e'
         e[0] = new Jewel(Jewel_colors.red);
         e[1] = new Jewel(Jewel_colors.green);
         e[2] = new Jewel(Jewel_colors.blue);
         e[3] = new Obstacle(ObstacleType.tree);
         e[4] = new Obstacle(ObstacleType.water);
+        if (mapSize > 10)
+            e[5] = new Obstacle(ObstacleType.radioactive);
+            else
+                e[5] = new Obstacle(ObstacleType.tree);
         for(int i = 0; i<mapSize/5; i++)
         {
             foreach (element item in e)
@@ -33,6 +37,7 @@ class Map
         }
         add_forest();
         add_forest();
+        
     }
 
     public void print_map(){

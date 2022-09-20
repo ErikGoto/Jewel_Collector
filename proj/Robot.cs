@@ -1,5 +1,3 @@
-
-    
 class Robot : element
 {
     private int n_joias;
@@ -14,9 +12,10 @@ class Robot : element
     }
 
     public void down_desl(Map my_map){
+        string comp = my_map.Mapa[Posicao[1]+1, Posicao[0]].Representacao;
         try
         {
-            if (my_map.Mapa[Posicao[1]+1, Posicao[0]].Representacao == "-- " && energy > 0)
+            if ((comp == "-- " || comp == "!! ") && energy > 0)
             Posicao[1]++;
             energy--;
         }
@@ -24,12 +23,14 @@ class Robot : element
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
+        DangerSensor(my_map, comp);
             
     }
     public void up_desl(Map my_map){
+        string comp = my_map.Mapa[Posicao[1]-1, Posicao[0]].Representacao;
         try       
         {
-            if (my_map.Mapa[Posicao[1]-1, Posicao[0]].Representacao == "-- " && energy > 0)
+            if ((comp == "-- " || comp == "!! ") && energy > 0)
                 Posicao[1]--;
                 energy--;
         }
@@ -37,12 +38,14 @@ class Robot : element
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
+        DangerSensor(my_map, comp);
             
     }
     public void left_desl(Map my_map){
+        string comp = my_map.Mapa[Posicao[1], Posicao[0]-1].Representacao;
         try
         {
-            if (my_map.Mapa[Posicao[1], Posicao[0]-1].Representacao == "-- " && energy > 0)
+            if ((comp == "-- " || comp == "!! ") && energy > 0)
                 Posicao[0]--;
                 energy--;
         }
@@ -50,12 +53,14 @@ class Robot : element
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
+        DangerSensor(my_map, comp);
             
     }
     public void right_desl(Map my_map){
+        string comp = my_map.Mapa[Posicao[1], Posicao[0]+1].Representacao;
         try
         {
-            if (my_map.Mapa[Posicao[1], Posicao[0]+1].Representacao == "-- " && energy > 0)
+            if ((comp == "-- " || comp == "!! ") && energy > 0)
                 Posicao[0]++;
                 energy--;
         }
@@ -63,6 +68,7 @@ class Robot : element
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
+        DangerSensor(my_map, comp);
     }
 
     public void grab(Map my_map){   
@@ -136,6 +142,44 @@ class Robot : element
             }
         }
     }
+    private void DangerSensor(Map myMap, string element){
+        if (element == "!! ")
+        {
+            energy -= 30;
+        }
+        try
+        {
+            if (myMap.Mapa[this.Posicao[1], this.Posicao[0]+1].Representacao == "!! ")
+            {
+                energy -= 10;
+                Console.WriteLine("@#$!Cuidado@#$!");
+            }
+        }catch{}
+        try
+        {
+            if (myMap.Mapa[this.Posicao[1], this.Posicao[0]-1].Representacao == "!! ")
+            {
+                energy -= 10;
+                Console.WriteLine("@#$!Cuidado@#$!");
+            }
+        }catch{}
+        try
+        {
+            if (myMap.Mapa[this.Posicao[1]+1, this.Posicao[0]].Representacao == "!! ")
+            {
+                energy -= 10;
+                Console.WriteLine("@#$!Cuidado@#$!");
+            }
+        }catch{}
+        try
+        {
+            if (myMap.Mapa[this.Posicao[1]-1, this.Posicao[0]].Representacao == "!! ")
+            {
+                energy -= 10;
+                Console.WriteLine("@#$!Cuidado@#$!");
+            }
+        }catch{}
+    }
 
     public void RobotInfos(){
         Console.WriteLine($"->Energia: {energy}");
@@ -143,5 +187,5 @@ class Robot : element
         Console.WriteLine($"->Num Joias coletadas: {n_joias}");
     }
     public int Energy{get {return energy;} set{energy = value;}}
-
+    public int Pontos{get {return pontos;}}
 }

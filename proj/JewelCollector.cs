@@ -10,7 +10,7 @@ public static void Main() {
     my_map.add_element(posIniRobs, (element)R2D2);
     
     do {
-        if (my_map.JewelsNumber() == 0)
+        if (my_map.JewelsNumber() == 0 && myMapSize < 31)
         {
             myMapSize++;
             my_map = new Map(myMapSize);
@@ -48,7 +48,14 @@ public static void Main() {
         } else if (command.Equals("g")) {
             R2D2.grab(my_map);  
         }
-    } while (running);
+    } while (R2D2.Energy > -1);
+
+    Console.WriteLine($"\n\n\n---------------------------------\n----------_____________----------\n----------|Fim de Jogo|----------\n---------------------------------\n->Pontuacao: {R2D2.Pontos}");
     }
 
+    
+
 }
+
+
+
