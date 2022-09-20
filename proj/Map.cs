@@ -1,6 +1,6 @@
 class Map
 {
-    private static int mapSize = 5;
+    private static int mapSize = 10;
     private element[,] mapa = new element[mapSize,mapSize];
     Espaco_vazio empty = new Espaco_vazio("-- ");
     public Map(int size){
@@ -8,8 +8,6 @@ class Map
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++)
                 mapaAux[i,j] = empty;
-        Console.WriteLine($"Mapa lenght: {mapa.Length}\n");
-
         mapa = mapaAux;
         mapSize = size;
 
@@ -18,6 +16,7 @@ class Map
         int [] rdnA = new int[] {rdn.Next(2, mapSize), rdn.Next(2, mapSize)};
 
         element[] e = new element[5];
+        //Elementos adicionados aleatoriamente no mapa ficam no array 'e'
         e[0] = new Jewel(Jewel_colors.red);
         e[1] = new Jewel(Jewel_colors.green);
         e[2] = new Jewel(Jewel_colors.blue);
@@ -34,7 +33,6 @@ class Map
         }
         add_forest();
         add_forest();
-        
     }
 
     public void print_map(){
@@ -43,6 +41,9 @@ class Map
                 Console.Write(mapa[i,j]);
             Console.WriteLine("\n");
         }
+
+        int jn = JewelsNumber();
+        Console.WriteLine($"Jewels Number: {jn}");
     }
 
     public void move_element(element e){
@@ -59,7 +60,7 @@ class Map
         mapa[pos[1], pos[0]] = empty;    
     }
 
-    public void add_forest(){
+    private void add_forest(){
         Random rdn = new Random();
         int[] rdnArray = new int[2];
         rdnArray[0] = rdn.Next(2, mapSize);
@@ -79,12 +80,18 @@ class Map
                 add_element(rdnArray, tree);
                 rdnArray[0] -= 1;
                 add_element(rdnArray, tree);
-  
         }
         catch (System.Exception)
-        {}
-        
-        
+        {} 
+    }
+
+    public int JewelsNumber(){
+        int n = 0;
+        for (int i = 0; i < mapSize; i++)
+            for (int j = 0; j < mapSize; j++)
+                if (mapa[i,j].ToString().Substring(0,1) == "J")
+                    n++;
+        return n;
     }
     public element[,] Mapa{get {return mapa;}}
 }

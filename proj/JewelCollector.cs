@@ -1,7 +1,8 @@
 public class JewelCollector {
 
 public static void Main() {
-    Map my_map = new Map(10);
+    int myMapSize = 10;
+    Map my_map = new Map(myMapSize);
     bool running = true;
 
     int[] posIniRobs = {0,0};
@@ -9,8 +10,14 @@ public static void Main() {
     my_map.add_element(posIniRobs, (element)R2D2);
     
     do {
+        if (my_map.JewelsNumber() == 0)
+        {
+            myMapSize++;
+            my_map = new Map(myMapSize);
+        }
         my_map.move_element(R2D2);
-        Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        Console.WriteLine($"Nível {myMapSize - 9} -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        R2D2.RobotInfos();
         Console.WriteLine("Enter the command: ");
         string command = Console.ReadLine();
 
@@ -41,8 +48,6 @@ public static void Main() {
         } else if (command.Equals("g")) {
             R2D2.grab(my_map);  
         }
-
-        Console.Write($"\nPosicao do Robo {R2D2.Posicao[0]}, {R2D2.Posicao[1]}\n");
     } while (running);
     }
 
