@@ -1,0 +1,22 @@
+\hypertarget{classEspaco__vazio}{}\doxysection{Espaco\+\_\+vazio Class Reference}
+\label{classEspaco__vazio}\index{Espaco\_vazio@{Espaco\_vazio}}
+
+
+Inheritance diagram for Espaco\+\_\+vazio\+:
+% FIG 0
+
+
+Collaboration diagram for Espaco\+\_\+vazio\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}\label{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}} 
+{\bfseries Espaco\+\_\+vazio} (string n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Espaco\+\_\+vazio.\+cs\end{DoxyCompactItemize}

@@ -3,6 +3,11 @@ class Robot : element
     private int n_joias;
     private int pontos;
     private int energy;
+
+    /// <summary>
+    /// Construtor da classe Robot
+    /// </summary>
+    /// <param name="posIni"> Posição inicial do Robô</param>
     public Robot(int[] posIni){
         this.Representacao = "R2 ";
         Posicao = posIni;
@@ -12,63 +17,64 @@ class Robot : element
     }
 
     public void down_desl(Map my_map){
-        string comp = my_map.Mapa[Posicao[1]+1, Posicao[0]].Representacao;
         try
         {
-            if ((comp == "-- " || comp == "!! ") && energy > 0)
-            Posicao[1]++;
-            energy--;
+            element comp = my_map.Mapa[Posicao[1]+1, Posicao[0]];
+            if ((comp is Espaco_vazio || comp.Representacao == "!! ") && energy > 0)
+                Posicao[1]++;
+                energy--;
+                DangerSensor(my_map, comp);
         }
         catch (System.IndexOutOfRangeException)
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
-        DangerSensor(my_map, comp);
             
     }
     public void up_desl(Map my_map){
-        string comp = my_map.Mapa[Posicao[1]-1, Posicao[0]].Representacao;
         try       
         {
-            if ((comp == "-- " || comp == "!! ") && energy > 0)
+            element comp = my_map.Mapa[Posicao[1]-1, Posicao[0]];
+            if ((comp is Espaco_vazio || comp.Representacao == "!! ") && energy > 0)
                 Posicao[1]--;
                 energy--;
+                DangerSensor(my_map, comp);
         }
         catch (System.IndexOutOfRangeException)
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
-        DangerSensor(my_map, comp);
             
     }
     public void left_desl(Map my_map){
-        string comp = my_map.Mapa[Posicao[1], Posicao[0]-1].Representacao;
         try
         {
-            if ((comp == "-- " || comp == "!! ") && energy > 0)
+            element comp = my_map.Mapa[Posicao[1], Posicao[0]-1];
+            if ((comp is Espaco_vazio || comp.Representacao == "!! ") && energy > 0)
                 Posicao[0]--;
                 energy--;
+                DangerSensor(my_map, comp);
         }
         catch (System.IndexOutOfRangeException)
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
-        DangerSensor(my_map, comp);
             
     }
-    public void right_desl(Map my_map){
-        string comp = my_map.Mapa[Posicao[1], Posicao[0]+1].Representacao;
+    public void right_desl(Map my_map){ 
         try
         {
-            if ((comp == "-- " || comp == "!! ") && energy > 0)
+            element comp = my_map.Mapa[Posicao[1], Posicao[0]+1];
+            if ((comp is Espaco_vazio || comp.Representacao == "!! ") && energy > 0)
                 Posicao[0]++;
                 energy--;
+                DangerSensor(my_map, comp);
         }
         catch (System.IndexOutOfRangeException)
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
-        DangerSensor(my_map, comp);
+        
     }
 
     public void grab(Map my_map){   
@@ -142,7 +148,8 @@ class Robot : element
             }
         }
     }
-    private void DangerSensor(Map myMap, string element){
+    private void DangerSensor(Map myMap, element e){
+        string element = e.Representacao;
         if (element == "!! ")
         {
             energy -= 30;
