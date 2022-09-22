@@ -1,7 +1,9 @@
 public enum ObstacleType : int
 {
-    radioactive = 2,
-    tree = 1,
+    nothing = 4,
+    radioactive = 3,
+    tree = 2,
+    old_tree = 1,
     water = 0
 
 }

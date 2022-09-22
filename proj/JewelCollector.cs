@@ -20,7 +20,7 @@ public static void Main() {
         R2D2.RobotInfos();
         Console.WriteLine("Enter the command: ");
         string command = Console.ReadLine();
-
+        Console.WriteLine("\n\n\n\n\n");
         
         if (command.Equals("quit")) {
             running = false;

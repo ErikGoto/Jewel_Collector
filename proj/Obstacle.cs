@@ -8,6 +8,10 @@ public class Obstacle : element
                 this.Representacao = "$$ "; //tree
                 obsType = ObstacleType.tree;
                 break;
+            case ObstacleType.old_tree:
+                this.Representacao = "|| "; //tree depois de ser usada
+                obsType = ObstacleType.old_tree;
+                break;
             case ObstacleType.water:
                 this.Representacao = "## "; //water
                 obsType = ObstacleType.water;
@@ -16,11 +20,15 @@ public class Obstacle : element
                 this.Representacao = "!! "; //radioactive
                 obsType = ObstacleType.radioactive;
                 break;
+            case ObstacleType.nothing:
+                this.Representacao = "__ "; //radioactive
+                obsType = ObstacleType.nothing;
+                break;
             default:
                 break;
         }
         
     }
 
-    public ObstacleType ObsType{get{return obsType;}}
+    public ObstacleType ObsType{get{return obsType;} set{obsType = value;}}
 }

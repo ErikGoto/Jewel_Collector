@@ -79,47 +79,83 @@ class Robot : element
 
     public void grab(Map my_map){   
         Espaco_vazio ept = new Espaco_vazio("-- ");
+        Obstacle oldTree = new Obstacle(ObstacleType.old_tree);
+        Obstacle tree = new Obstacle(ObstacleType.nothing);
         try{
-            string comp = "";
-            comp = my_map.Mapa[this.Posicao[1], this.Posicao[0]+1].Representacao.Substring(0,1);
-            if (comp == "J" || comp =="$")
+            element comp = my_map.Mapa[this.Posicao[1], this.Posicao[0]+1];
+            tree.ObsType = ObstacleType.nothing;
+            try
+            {
+                tree = (Obstacle)comp;
+            }catch{}
+            
+            if (comp is Jewel || tree.ObsType == ObstacleType.tree)
             {
                 element j = my_map.Mapa[Posicao[1], Posicao[0]+1];
-                my_map.Mapa[this.Posicao[1], this.Posicao[0]+1] = ept;
+                if (tree.ObsType == ObstacleType.tree)
+                    my_map.Mapa[this.Posicao[1], this.Posicao[0]+1] = oldTree;
+                    else
+                        my_map.Mapa[this.Posicao[1], this.Posicao[0]+1] = ept;
                 Colected(j);
-            } 
+                return;
+            }
         }
         catch{}
+
         try{
-            string comp = "";
-            comp = my_map.Mapa[this.Posicao[1], this.Posicao[0]-1].Representacao.Substring(0,1);
-            if (comp == "J" || comp == "$")
+            element comp = my_map.Mapa[this.Posicao[1], this.Posicao[0]-1];
+            tree.ObsType = ObstacleType.nothing;
+            try
+            {
+                tree = (Obstacle)comp;
+            }catch{}
+            if (comp is Jewel || tree.ObsType == ObstacleType.tree)
             {
                 element j = my_map.Mapa[Posicao[1], Posicao[0]-1];
-                my_map.Mapa[this.Posicao[1], this.Posicao[0]-1] = ept;
+                if (tree.ObsType == ObstacleType.tree)
+                    my_map.Mapa[this.Posicao[1], this.Posicao[0]-1] = oldTree;
+                    else
+                        my_map.Mapa[this.Posicao[1], this.Posicao[0]-1] = ept;
                 Colected(j);
+                return;
             } 
         }catch{}
         try
         {
-            string comp = "";
-            comp = my_map.Mapa[this.Posicao[1]+1, this.Posicao[0]].Representacao.Substring(0,1);
-           if (comp == "J" || comp == "$")
+            element comp = my_map.Mapa[this.Posicao[1]+1, this.Posicao[0]];
+            tree.ObsType = ObstacleType.nothing;
+            try
+            {
+                tree = (Obstacle)comp;
+            }catch{}
+           if (comp is Jewel || tree.ObsType == ObstacleType.tree)
             {
                 element j = my_map.Mapa[Posicao[1]+1, Posicao[0]];
-                my_map.Mapa[this.Posicao[1]+1, this.Posicao[0]] = ept;
+                if (tree.ObsType == ObstacleType.tree)
+                    my_map.Mapa[this.Posicao[1]+1, this.Posicao[0]] = oldTree;
+                    else
+                        my_map.Mapa[this.Posicao[1]+1, this.Posicao[0]] = ept;
                 Colected(j);
+                return;
             }  
         }catch{}
         try
         {
-            string comp = "";
-            comp = my_map.Mapa[this.Posicao[1]-1, this.Posicao[0]].Representacao.Substring(0,1);
-           if (comp == "J" || comp == "$")
+            element comp = my_map.Mapa[this.Posicao[1]-1, this.Posicao[0]];
+            tree.ObsType = ObstacleType.nothing;
+            try
+            {
+                tree = (Obstacle)comp;
+            }catch{}
+            if (comp is Jewel || tree.ObsType == ObstacleType.tree)
             {
                 element j = my_map.Mapa[Posicao[1]-1, Posicao[0]];
-                my_map.Mapa[this.Posicao[1]-1, this.Posicao[0]] = ept;
+                if (tree.ObsType == ObstacleType.tree)
+                    my_map.Mapa[this.Posicao[1]-1, this.Posicao[0]] = oldTree;
+                    else 
+                        my_map.Mapa[this.Posicao[1]-1, this.Posicao[0]] = ept;
                 Colected(j);
+                return;
             }  
         }catch{}
 
