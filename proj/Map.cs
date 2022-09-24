@@ -37,7 +37,6 @@ class Map
         }
         add_forest();
         add_forest();
-        
     }
 
     public void print_map(){

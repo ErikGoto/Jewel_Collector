@@ -6,7 +6,7 @@ public static void Main() {
     bool running = true;
 
     int[] posIniRobs = {0,0};
-    Robot R2D2 = new Robot(posIniRobs);
+    Robot R2D2 = new Robot(posIniRobs, 10);
     my_map.add_element(posIniRobs, (element)R2D2);
     
     do {

@@ -1,4 +1,4 @@
-public class Jewel : element
+public class Jewel : element, ICollectable, IRechargeable
 {
     private Jewel_colors color;
     public Jewel(Jewel_colors c){
@@ -22,4 +22,12 @@ public class Jewel : element
             get{return color;}
             set{color = value;}
         }
+    
+    public void PrintCollected(){
+        Console.WriteLine($"Joia Coletada: {this.Color}");
+    }
+    public void PrintRecharged(){
+        if(this.Color == Jewel_colors.blue)
+            Console.WriteLine($"*+5 de energia*");
+    }
 }

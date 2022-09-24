@@ -8,12 +8,12 @@ class Robot : element
     /// Construtor da classe Robot
     /// </summary>
     /// <param name="posIni"> Posição inicial do Robô</param>
-    public Robot(int[] posIni){
+    public Robot(int[] posIni, int initialEnergy){
         this.Representacao = "R2 ";
         Posicao = posIni;
         n_joias = 0;
         pontos = 0;
-        energy = 50;
+        energy = initialEnergy;
     }
 
     public void down_desl(Map my_map){
@@ -168,16 +168,18 @@ class Robot : element
                     if (e.Representacao == "Jb ")
                     {
                         energy += 5;
-                        Console.WriteLine("*+5 de energia*");
+                        Jewel j = (Jewel)e;
+                        j.PrintRecharged();
                     }
                     Jewel je = (Jewel)e;
-                    Console.WriteLine($"*Joia Coletada: {je.Color}*");
+                    je.PrintCollected();
                     pontos += (int)je.Color;
                     n_joias += 1;
                     break;
                 case "$$ ":
                     energy += 3;
-                    Console.WriteLine("*+3 de energia*");
+                    Obstacle o = (Obstacle)e;
+                    o.PrintRecharged();
                     break;
                 default:
                     break;

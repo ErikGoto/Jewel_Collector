@@ -31,4 +31,8 @@ public class Obstacle : element
     }
 
     public ObstacleType ObsType{get{return obsType;} set{obsType = value;}}
+    public void PrintRecharged(){
+        if(this.obsType == ObstacleType.tree)
+            Console.WriteLine($"*+3 de energia*");
+    }
 }
