@@ -6,4 +6,8 @@ digraph "Jewel"
   Node1 [label="Jewel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="element",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classelement.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ICollectable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceICollectable.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="IRechargeable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceIRechargeable.html",tooltip=" "];
 }

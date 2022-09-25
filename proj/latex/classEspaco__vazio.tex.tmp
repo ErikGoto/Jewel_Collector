@@ -11,10 +11,27 @@ Collaboration diagram for Espaco\+\_\+vazio\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}\label{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}} 
-{\bfseries Espaco\+\_\+vazio} (string n)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}{Espaco\+\_\+vazio}} (string n)
+\begin{DoxyCompactList}\small\item\em Classe dedicada para representar o espaço vazio no mapa \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}\label{classEspaco__vazio_a62bf83be71bab6fba4f81e35afe0ddba}} 
+\index{Espaco\_vazio@{Espaco\_vazio}!Espaco\_vazio@{Espaco\_vazio}}
+\index{Espaco\_vazio@{Espaco\_vazio}!Espaco\_vazio@{Espaco\_vazio}}
+\doxysubsubsection{\texorpdfstring{Espaco\_vazio()}{Espaco\_vazio()}}
+{\footnotesize\ttfamily Espaco\+\_\+vazio.\+Espaco\+\_\+vazio (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Classe dedicada para representar o espaço vazio no mapa 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Representação do espaço vazio\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

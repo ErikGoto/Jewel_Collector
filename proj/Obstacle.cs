@@ -1,6 +1,10 @@
 public class Obstacle : element
 {
     private ObstacleType obsType;
+    /// <summary>
+    /// Construtor da classe obstacle. Objetos da classe obstacle impedem o avanço do robô
+    /// </summary>
+    /// <param name="t">Tipo do obstáculo. Ex: Tree, water, radioactive</param>
     public Obstacle(ObstacleType t){
         switch (t)
         {

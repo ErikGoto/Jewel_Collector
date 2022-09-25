@@ -9,13 +9,16 @@ class Robot : element
     /// </summary>
     /// <param name="posIni"> Posição inicial do Robô</param>
     public Robot(int[] posIni, int initialEnergy){
-        this.Representacao = "R2 ";
+        this.Representacao = "ME ";
         Posicao = posIni;
         n_joias = 0;
         pontos = 0;
         energy = initialEnergy;
     }
-
+    /// <summary>
+    /// Deslocamento do robô para baixo
+    /// </summary>
+    /// <param name="my_map">Mapa em que o robô está inserido</param>
     public void down_desl(Map my_map){
         try
         {
@@ -29,7 +32,10 @@ class Robot : element
         { 
             Console.WriteLine("Limite do mapa atingido");
         }
-            
+    /// <summary>
+    /// Deslocamento do robô para cima
+    /// </summary>
+    /// <param name="my_map">Mapa em que o robô está inserido</param>        
     }
     public void up_desl(Map my_map){
         try       
@@ -46,6 +52,10 @@ class Robot : element
         }
             
     }
+    /// <summary>
+    /// Deslocamento do robô para a esquerda
+    /// </summary>
+    /// <param name="my_map">Mapa em que o robô está inserido</param>
     public void left_desl(Map my_map){
         try
         {
@@ -61,6 +71,10 @@ class Robot : element
         }
             
     }
+    /// <summary>
+    /// Deslocamento do robô para a direita
+    /// </summary>
+    /// <param name="my_map">Mapa em que o robô está inserido</param>
     public void right_desl(Map my_map){ 
         try
         {
@@ -76,7 +90,13 @@ class Robot : element
         }
         
     }
-
+    /// <summary>
+    /// Pega um elemento do mapa. 
+    /// Pode ser do tipo coletável, neste caso o elemento será guardado na bag. Mas o elemento também pode ser
+    /// um tipo rechargeable, neste caso a energia será recarregada.
+    /// Obs: Ao coletar um elemento do tipo tree, será recuperada +3 de energia e o obstáculo será substituído por uma old_tree("||")
+    /// </summary>
+    /// <param name="my_map"></param>
     public void grab(Map my_map){   
         Espaco_vazio ept = new Espaco_vazio("-- ");
         Obstacle oldTree = new Obstacle(ObstacleType.old_tree);
@@ -225,12 +245,22 @@ class Robot : element
             }
         }catch{}
     }
-
+    /// <summary>
+    /// Imprime no console informações do robô sobre: Energia, Pontos e Números de joias coletadas
+    /// </summary>
     public void RobotInfos(){
         Console.WriteLine($"->Energia: {energy}");
         Console.WriteLine($"->Pontos: {pontos}");
         Console.WriteLine($"->Num Joias coletadas: {n_joias}");
     }
+    /// <summary>
+    /// Retorna ou escreve a quantidade de energia do robô
+    /// </summary>
+    /// <value></value>
     public int Energy{get {return energy;} set{energy = value;}}
+    /// <summary>
+    /// Retorna ou escreve a quantidade de pontos
+    /// </summary>
+    /// <value></value>
     public int Pontos{get {return pontos;}}
 }

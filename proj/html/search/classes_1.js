@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jewel_9',['Jewel',['../classJewel.html',1,'']]],
-  ['jewelcollector_10',['JewelCollector',['../classJewelCollector.html',1,'']]]
+  ['icollectable_28',['ICollectable',['../interfaceICollectable.html',1,'']]],
+  ['irechargeable_29',['IRechargeable',['../interfaceIRechargeable.html',1,'']]]
 ];

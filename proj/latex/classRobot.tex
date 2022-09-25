@@ -11,43 +11,36 @@ Collaboration diagram for Robot\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classRobot_afc23e59277d788e674345e734c017155}{Robot}} (int\mbox{[}$\,$\mbox{]} pos\+Ini)
+\mbox{\hyperlink{classRobot_affc70178543dc37afd356f3641c02c2a}{Robot}} (int\mbox{[}$\,$\mbox{]} pos\+Ini, int initial\+Energy)
 \begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classRobot}{Robot}} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRobot_a2db63b7a35e9bf46ede1d1be90bf0a98}\label{classRobot_a2db63b7a35e9bf46ede1d1be90bf0a98}} 
-void {\bfseries down\+\_\+desl} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
-\item 
+void \mbox{\hyperlink{classRobot_a2db63b7a35e9bf46ede1d1be90bf0a98}{down\+\_\+desl}} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Deslocamento do robô para baixo \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRobot_a206a9d1cd121f391264e7a72525dec6b}\label{classRobot_a206a9d1cd121f391264e7a72525dec6b}} 
 void {\bfseries up\+\_\+desl} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
 \item 
-\mbox{\Hypertarget{classRobot_a6e64b58082a46cdca0bcc215df03a1ba}\label{classRobot_a6e64b58082a46cdca0bcc215df03a1ba}} 
-void {\bfseries left\+\_\+desl} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
-\item 
-\mbox{\Hypertarget{classRobot_a89f368c3fd497985f2a7a2bb95d81eba}\label{classRobot_a89f368c3fd497985f2a7a2bb95d81eba}} 
-void {\bfseries right\+\_\+desl} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
-\item 
-\mbox{\Hypertarget{classRobot_ae69520686faed646c73d496bd90cb1af}\label{classRobot_ae69520686faed646c73d496bd90cb1af}} 
-void {\bfseries grab} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
-\item 
-\mbox{\Hypertarget{classRobot_aba8eebf839de415369e0cedaa660060a}\label{classRobot_aba8eebf839de415369e0cedaa660060a}} 
-void {\bfseries Robot\+Infos} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classRobot_a6e64b58082a46cdca0bcc215df03a1ba}{left\+\_\+desl}} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Deslocamento do robô para a esquerda \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_a89f368c3fd497985f2a7a2bb95d81eba}{right\+\_\+desl}} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Deslocamento do robô para a direita \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_ae69520686faed646c73d496bd90cb1af}{grab}} (\mbox{\hyperlink{classMap}{Map}} my\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Pega um elemento do mapa. Pode ser do tipo coletável, neste caso o elemento será guardado na bag, ou um tipo rechargeable, em que a energia será recarregada. Obs\+: Ao coletar um elemento do tipo tree, será recuperada +3 de energia e o obstáculo será substituído por uma old\+\_\+tree(\char`\"{}$\vert$$\vert$\char`\"{}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_aba8eebf839de415369e0cedaa660060a}{Robot\+Infos}} ()
+\begin{DoxyCompactList}\small\item\em Imprime no console informações do robô sobre\+: Energia, Pontos e Números de joias coletadas \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRobot_a1ae18603342894ba1af361b704a33d32}\label{classRobot_a1ae18603342894ba1af361b704a33d32}} 
-int {\bfseries Energy}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{classRobot_ac2a8ce6fb0cc2a223703068edb1c3e04}\label{classRobot_ac2a8ce6fb0cc2a223703068edb1c3e04}} 
-int {\bfseries Pontos}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classRobot_a1ae18603342894ba1af361b704a33d32}{Energy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna ou escreve a quantidade de energia do robô \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRobot_ac2a8ce6fb0cc2a223703068edb1c3e04}{Pontos}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna ou escreve a quantidade de pontos \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classRobot_afc23e59277d788e674345e734c017155}\label{classRobot_afc23e59277d788e674345e734c017155}} 
+\mbox{\Hypertarget{classRobot_affc70178543dc37afd356f3641c02c2a}\label{classRobot_affc70178543dc37afd356f3641c02c2a}} 
 \index{Robot@{Robot}!Robot@{Robot}}
 \index{Robot@{Robot}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
-{\footnotesize\ttfamily Robot.\+Robot (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Ini }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Robot.\+Robot (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Ini,  }\item[{int}]{initial\+Energy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -58,6 +51,110 @@ Construtor da classe \mbox{\hyperlink{classRobot}{Robot}}
 {\em pos\+Ini} & Posição inicial do Robô\\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRobot_a2db63b7a35e9bf46ede1d1be90bf0a98}\label{classRobot_a2db63b7a35e9bf46ede1d1be90bf0a98}} 
+\index{Robot@{Robot}!down\_desl@{down\_desl}}
+\index{down\_desl@{down\_desl}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{down\_desl()}{down\_desl()}}
+{\footnotesize\ttfamily void Robot.\+down\+\_\+desl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap}{Map}}}]{my\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deslocamento do robô para baixo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+map} & Mapa em que o robô está inserido\\
+\hline
+\end{DoxyParams}
+Deslocamento do robô para cima 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+map} & Mapa em que o robô está inserido\\
+\hline
+\end{DoxyParams}
+~\newline
+\mbox{\Hypertarget{classRobot_ae69520686faed646c73d496bd90cb1af}\label{classRobot_ae69520686faed646c73d496bd90cb1af}} 
+\index{Robot@{Robot}!grab@{grab}}
+\index{grab@{grab}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{grab()}{grab()}}
+{\footnotesize\ttfamily void Robot.\+grab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap}{Map}}}]{my\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pega um elemento do mapa. Pode ser do tipo coletável, neste caso o elemento será guardado na bag, ou um tipo rechargeable, em que a energia será recarregada. Obs\+: Ao coletar um elemento do tipo tree, será recuperada +3 de energia e o obstáculo será substituído por uma old\+\_\+tree(\char`\"{}$\vert$$\vert$\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+map} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobot_a6e64b58082a46cdca0bcc215df03a1ba}\label{classRobot_a6e64b58082a46cdca0bcc215df03a1ba}} 
+\index{Robot@{Robot}!left\_desl@{left\_desl}}
+\index{left\_desl@{left\_desl}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{left\_desl()}{left\_desl()}}
+{\footnotesize\ttfamily void Robot.\+left\+\_\+desl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap}{Map}}}]{my\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deslocamento do robô para a esquerda 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+map} & Mapa em que o robô está inserido\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobot_a89f368c3fd497985f2a7a2bb95d81eba}\label{classRobot_a89f368c3fd497985f2a7a2bb95d81eba}} 
+\index{Robot@{Robot}!right\_desl@{right\_desl}}
+\index{right\_desl@{right\_desl}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{right\_desl()}{right\_desl()}}
+{\footnotesize\ttfamily void Robot.\+right\+\_\+desl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap}{Map}}}]{my\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deslocamento do robô para a direita 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+map} & Mapa em que o robô está inserido\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobot_aba8eebf839de415369e0cedaa660060a}\label{classRobot_aba8eebf839de415369e0cedaa660060a}} 
+\index{Robot@{Robot}!RobotInfos@{RobotInfos}}
+\index{RobotInfos@{RobotInfos}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{RobotInfos()}{RobotInfos()}}
+{\footnotesize\ttfamily void Robot.\+Robot\+Infos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime no console informações do robô sobre\+: Energia, Pontos e Números de joias coletadas 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRobot_a1ae18603342894ba1af361b704a33d32}\label{classRobot_a1ae18603342894ba1af361b704a33d32}} 
+\index{Robot@{Robot}!Energy@{Energy}}
+\index{Energy@{Energy}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Energy}{Energy}}
+{\footnotesize\ttfamily int Robot.\+Energy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retorna ou escreve a quantidade de energia do robô 
+
+\mbox{\Hypertarget{classRobot_ac2a8ce6fb0cc2a223703068edb1c3e04}\label{classRobot_ac2a8ce6fb0cc2a223703068edb1c3e04}} 
+\index{Robot@{Robot}!Pontos@{Pontos}}
+\index{Pontos@{Pontos}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Pontos}{Pontos}}
+{\footnotesize\ttfamily int Robot.\+Pontos\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Retorna ou escreve a quantidade de pontos 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

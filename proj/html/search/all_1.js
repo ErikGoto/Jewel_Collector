@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['jewel_2',['Jewel',['../classJewel.html',1,'']]],
-  ['jewelcollector_3',['JewelCollector',['../classJewelCollector.html',1,'']]]
+  ['color_1',['Color',['../classJewel.html#a8bae31acb503c7156d98cec5af93ebdc',1,'Jewel']]]
 ];

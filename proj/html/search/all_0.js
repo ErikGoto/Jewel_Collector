@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['element_0',['element',['../classelement.html',1,'']]],
-  ['espaco_5fvazio_1',['Espaco_vazio',['../classEspaco__vazio.html',1,'']]]
+  ['add_5felement_0',['add_element',['../classMap.html#a6bf1fe37dd5f34ad93ecca0ce07ae25a',1,'Map']]]
 ];

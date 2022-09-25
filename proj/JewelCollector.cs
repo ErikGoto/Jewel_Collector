@@ -19,42 +19,37 @@ public static void Main() {
         Console.WriteLine($"Nível {myMapSize - 9} -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         R2D2.RobotInfos();
         Console.WriteLine("Enter the command: ");
-        string command = Console.ReadLine();
+        ConsoleKeyInfo command = Console.ReadKey(true);
         Console.WriteLine("\n\n\n\n\n");
         
-        if (command.Equals("quit")) {
-            running = false;
-        } else if (command.Equals("w")) {
-            
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.up_desl(my_map);
-           
-            
-        } else if (command.Equals("a")) {
-            
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.left_desl(my_map);
-            
-        } else if (command.Equals("s")) {
-            
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.down_desl(my_map);
-            
-        } else if (command.Equals("d")) {
-            
-            my_map.remove_element(R2D2.Posicao);
-            R2D2.right_desl(my_map);
-            
-        } else if (command.Equals("g")) {
-            R2D2.grab(my_map);  
+        Console.WriteLine(command.Key.ToString());
+        switch (command.Key.ToString())
+        {
+            case "W":
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.up_desl(my_map);
+                break;
+            case "A":
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.left_desl(my_map);
+                break;
+            case "S":
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.down_desl(my_map);
+                break;
+            case "D":
+                my_map.remove_element(R2D2.Posicao);
+                R2D2.right_desl(my_map);
+                break;
+            case "G":
+                R2D2.grab(my_map); 
+                break;
+            default:break;
         }
-    } while (R2D2.Energy > -1);
+    } while ((R2D2.Energy > -1));
 
     Console.WriteLine($"\n\n\n---------------------------------\n----------_____________----------\n----------|Fim de Jogo|----------\n---------------------------------\n->Pontuacao: {R2D2.Pontos}");
     }
-
-    
-
 }
 
 

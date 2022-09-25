@@ -3,30 +3,115 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMap_aac9391702ccade7460f04cd553ddaf56}\label{classMap_aac9391702ccade7460f04cd553ddaf56}} 
-{\bfseries Map} (int size)
-\item 
-\mbox{\Hypertarget{classMap_ae6e678719d59b97ad9a70d2bfdd4313f}\label{classMap_ae6e678719d59b97ad9a70d2bfdd4313f}} 
-void {\bfseries print\+\_\+map} ()
-\item 
-\mbox{\Hypertarget{classMap_a0d90a93f2fbc0b8da24c2823bf08c53d}\label{classMap_a0d90a93f2fbc0b8da24c2823bf08c53d}} 
-void {\bfseries move\+\_\+element} (\mbox{\hyperlink{classelement}{element}} e)
-\item 
-\mbox{\Hypertarget{classMap_a6bf1fe37dd5f34ad93ecca0ce07ae25a}\label{classMap_a6bf1fe37dd5f34ad93ecca0ce07ae25a}} 
-void {\bfseries add\+\_\+element} (int\mbox{[}$\,$\mbox{]} pos, \mbox{\hyperlink{classelement}{element}} e)
-\item 
-\mbox{\Hypertarget{classMap_a8296d414dbf38acda1fb07e13331174b}\label{classMap_a8296d414dbf38acda1fb07e13331174b}} 
-void {\bfseries remove\+\_\+element} (int\mbox{[}$\,$\mbox{]} pos)
-\item 
-\mbox{\Hypertarget{classMap_a846601f57788e1883cbda167b83b03d8}\label{classMap_a846601f57788e1883cbda167b83b03d8}} 
-int {\bfseries Jewels\+Number} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMap_aac9391702ccade7460f04cd553ddaf56}{Map}} (int size)
+\begin{DoxyCompactList}\small\item\em Construtor da classe map, dispõe osbtáculos e joias aleatoriamente no mapa. Cada elemento é adicionado (map\+Size/5). Além disso, florestas(conjunto de árvores) também são adicionados na frequência de (map\+Size/10) A partir do nível 1 o obstáculo do tipo radioativo também é adicionado ao mapa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_ae6e678719d59b97ad9a70d2bfdd4313f}{print\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o mapa no console \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a0d90a93f2fbc0b8da24c2823bf08c53d}{move\+\_\+element}} (\mbox{\hyperlink{classelement}{element}} e)
+\begin{DoxyCompactList}\small\item\em Move um elemento para um determinada posição \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a6bf1fe37dd5f34ad93ecca0ce07ae25a}{add\+\_\+element}} (int\mbox{[}$\,$\mbox{]} pos, \mbox{\hyperlink{classelement}{element}} e)
+\begin{DoxyCompactList}\small\item\em Adiciona um elemento em uma posição do mapa \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a8296d414dbf38acda1fb07e13331174b}{remove\+\_\+element}} (int\mbox{[}$\,$\mbox{]} pos)
+\begin{DoxyCompactList}\small\item\em Remove um elemento do mapa \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMap_a846601f57788e1883cbda167b83b03d8}{Jewels\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Quantidade atual de Joias no mapa \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMap_a8e0d3ead587529e3645d365a2a021960}\label{classMap_a8e0d3ead587529e3645d365a2a021960}} 
 \mbox{\hyperlink{classelement}{element}}\mbox{[},\mbox{]} {\bfseries Mapa}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMap_aac9391702ccade7460f04cd553ddaf56}\label{classMap_aac9391702ccade7460f04cd553ddaf56}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map.\+Map (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe map, dispõe osbtáculos e joias aleatoriamente no mapa. Cada elemento é adicionado (map\+Size/5). Além disso, florestas(conjunto de árvores) também são adicionados na frequência de (map\+Size/10) A partir do nível 1 o obstáculo do tipo radioativo também é adicionado ao mapa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Tamanho do mapa\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMap_a6bf1fe37dd5f34ad93ecca0ce07ae25a}\label{classMap_a6bf1fe37dd5f34ad93ecca0ce07ae25a}} 
+\index{Map@{Map}!add\_element@{add\_element}}
+\index{add\_element@{add\_element}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{add\_element()}{add\_element()}}
+{\footnotesize\ttfamily void Map.\+add\+\_\+element (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{pos,  }\item[{\mbox{\hyperlink{classelement}{element}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adiciona um elemento em uma posição do mapa 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Posição que o elemento será adicionado\\
+\hline
+{\em e} & Elemento a ser adicionado\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_a846601f57788e1883cbda167b83b03d8}\label{classMap_a846601f57788e1883cbda167b83b03d8}} 
+\index{Map@{Map}!JewelsNumber@{JewelsNumber}}
+\index{JewelsNumber@{JewelsNumber}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{JewelsNumber()}{JewelsNumber()}}
+{\footnotesize\ttfamily int Map.\+Jewels\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Quantidade atual de Joias no mapa 
+
+\begin{DoxyReturn}{Returns}
+Número de joias no mapa
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMap_a0d90a93f2fbc0b8da24c2823bf08c53d}\label{classMap_a0d90a93f2fbc0b8da24c2823bf08c53d}} 
+\index{Map@{Map}!move\_element@{move\_element}}
+\index{move\_element@{move\_element}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{move\_element()}{move\_element()}}
+{\footnotesize\ttfamily void Map.\+move\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classelement}{element}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move um elemento para um determinada posição 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_ae6e678719d59b97ad9a70d2bfdd4313f}\label{classMap_ae6e678719d59b97ad9a70d2bfdd4313f}} 
+\index{Map@{Map}!print\_map@{print\_map}}
+\index{print\_map@{print\_map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{print\_map()}{print\_map()}}
+{\footnotesize\ttfamily void Map.\+print\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime o mapa no console 
+
+\mbox{\Hypertarget{classMap_a8296d414dbf38acda1fb07e13331174b}\label{classMap_a8296d414dbf38acda1fb07e13331174b}} 
+\index{Map@{Map}!remove\_element@{remove\_element}}
+\index{remove\_element@{remove\_element}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{remove\_element()}{remove\_element()}}
+{\footnotesize\ttfamily void Map.\+remove\+\_\+element (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um elemento do mapa 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Posição do elemento a ser removido\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
